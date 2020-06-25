@@ -13,7 +13,7 @@ h1 {
   display: flex;
   flex-direction: column;
   width: 70vw;
-  height: 60vh;
+  height: 90vh;
   padding: 2rem 1rem;
   margin: 3rem auto;
   justify-content: space-between;
@@ -24,4 +24,8 @@ h1 {
   display: block;
   margin: 3rem auto;
   font-size: 3rem;
+}
+#final-tip {
+  display: none;
+  font-size: 5rem;
 }

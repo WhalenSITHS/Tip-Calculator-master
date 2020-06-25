@@ -120,8 +120,29 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 })({"index.js":[function(require,module,exports) {
 //get user input
 var tipForm = document.querySelector("#tip-form");
-var billAmount = document.querySelector("#bill-amount");
-var tipPercentage = document.querySelector("#tip-amount"); //console.log(billAmount.value);
+/* const billAmount = Number(document.querySelector("#bill-amount").value);
+const tipPercentage = Number(document.querySelector("#tip-amount").value); */
+//console.log(billAmount.value);
+//This didn't quite work, why?
+// tipForm.addEventListener("submit", function () {
+//   const tipAmount = Math.round(tipPercentage * billAmount);
+//   console.log(tipAmount);
+// });
+///init function and default
+
+tipForm.addEventListener("submit", function (e) {
+  e.preventDefault();
+  var billAmount = Number(document.querySelector("#bill-amount").value);
+  var tipPercentage = Number(document.querySelector("#tip-amount").value);
+  var tipAmount = tipPercentage / 100 * billAmount; //console.log(tipAmount);
+  //lets clear the fields
+
+  var finalTipSelector = document.getElementById("final-tip");
+  finalTipSelector.innerHTML = "".concat(tipAmount);
+  finalTipSelector.style.display = "block";
+  document.querySelector("#bill-amount").value = "";
+  document.querySelector("#tip-amount").value = "";
+});
 },{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -150,7 +171,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51725" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51957" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
