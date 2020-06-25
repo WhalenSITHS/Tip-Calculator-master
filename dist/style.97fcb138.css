@@ -6,9 +6,11 @@ body {
   padding: 0;
   color: white;
 }
+
 h1 {
   font-size: 5rem;
 }
+
 .container {
   display: flex;
   flex-direction: column;
@@ -20,8 +22,11 @@ h1 {
   align-items: center;
   background-color: #282f33;
 }
+
 .form-text {
   display: block;
   margin: 3rem auto;
   font-size: 3rem;
 }
+
+/*# sourceMappingURL=/style.97fcb138.css.map */

@@ -1,12 +1,5 @@
-///console only
-
-//declare the bill
-//let bill = 50; let vs const
-//let bill = "50"
-const bill = 50;
-//decide the tip %
-const tipPercentage = 0.2;
-
-//multiply the tip by the bill
-const tipAmount = Math.round(bill * tipPercentage);
-console.log(tipAmount);
+//get user input
+const tipForm = document.querySelector("#tip-form");
+const billAmount = document.querySelector("#bill-amount");
+const tipPercentage = document.querySelector("#tip-amount");
+//console.log(billAmount.value);
