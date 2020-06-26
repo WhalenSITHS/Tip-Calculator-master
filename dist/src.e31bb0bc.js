@@ -133,12 +133,21 @@ const tipPercentage = Number(document.querySelector("#tip-amount").value); */
 tipForm.addEventListener("submit", function (e) {
   e.preventDefault();
   var billAmount = Number(document.querySelector("#bill-amount").value);
-  var tipPercentage = Number(document.querySelector("#tip-amount").value);
-  var tipAmount = tipPercentage / 100 * billAmount; //console.log(tipAmount);
+  var tipPercentage;
+
+  if (document.getElementById("bad").checked) {
+    tipPercentage = 0.1;
+  } else if (document.getElementById("good").checked) {
+    tipPercentage = 0.15;
+  } else {
+    tipPercentage = 0.2;
+  }
+
+  var tipAmount = tipPercentage * billAmount; //console.log(tipAmount);
   //lets clear the fields
 
   var finalTipSelector = document.getElementById("final-tip");
-  finalTipSelector.innerHTML = "".concat(tipAmount);
+  finalTipSelector.innerHTML = "Tip them ".concat(tipAmount, " Dollars");
   finalTipSelector.style.display = "block";
   document.querySelector("#bill-amount").value = "";
   document.querySelector("#tip-amount").value = "";
@@ -171,7 +180,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51957" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52210" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
