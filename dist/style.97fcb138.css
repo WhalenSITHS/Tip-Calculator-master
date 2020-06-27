@@ -16,11 +16,12 @@ h1 {
   flex-direction: column;
   width: 70vw;
   height: 90vh;
-  padding: 2rem 1rem;
+  padding: 5rem 1rem;
   margin: 3rem auto;
   justify-content: space-between;
   align-items: center;
   background-color: #282f33;
+  text-align: center;
 }
 
 .form-text {
@@ -31,6 +32,7 @@ h1 {
 
 #final-tip {
   display: none;
+  margin: 2rem auto;
   font-size: 5rem;
 }
 
