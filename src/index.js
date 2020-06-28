@@ -1,5 +1,5 @@
 //get user input
-const tipForm = document.querySelector("#tip-form");
+//const tipForm = document.querySelector("#tip-form");
 /* const billAmount = Number(document.querySelector("#bill-amount").value);
 const tipPercentage = Number(document.querySelector("#tip-amount").value); */
 //console.log(billAmount.value);
@@ -10,6 +10,7 @@ const tipPercentage = Number(document.querySelector("#tip-amount").value); */
 //   console.log(tipAmount);
 // });
 
+const tipForm = document.querySelector("#tip-form");
 ///init function and default
 tipForm.addEventListener("submit", function (e) {
   e.preventDefault();
