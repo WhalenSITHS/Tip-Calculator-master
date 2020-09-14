@@ -119,7 +119,8 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   return newRequire;
 })({"index.js":[function(require,module,exports) {
 //get user input
-var tipForm = document.querySelector("#tip-form");
+//const tipForm = document.querySelector("#tip-form");
+
 /* const billAmount = Number(document.querySelector("#bill-amount").value);
 const tipPercentage = Number(document.querySelector("#tip-amount").value); */
 //console.log(billAmount.value);
@@ -128,7 +129,7 @@ const tipPercentage = Number(document.querySelector("#tip-amount").value); */
 //   const tipAmount = Math.round(tipPercentage * billAmount);
 //   console.log(tipAmount);
 // });
-///init function and default
+var tipForm = document.querySelector("#tip-form"); ///init function and default
 
 tipForm.addEventListener("submit", function (e) {
   e.preventDefault();
@@ -171,7 +172,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51957" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61737" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
