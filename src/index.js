@@ -3,7 +3,7 @@
 /* const billAmount = Number(document.querySelector("#bill-amount").value);
 const tipPercentage = Number(document.querySelector("#tip-amount").value); */
 //console.log(billAmount.value);
-
+// ITS THE ID FOOL
 //This didn't quite work, why?
 // tipForm.addEventListener("submit", function () {
 //   const tipAmount = Math.round(tipPercentage * billAmount);
